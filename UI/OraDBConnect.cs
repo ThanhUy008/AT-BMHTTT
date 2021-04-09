@@ -34,8 +34,8 @@ namespace UIPhanHe1
             }
             catch (Exception ex)
             {
-
-                Console.WriteLine(ex);
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+               // Console.WriteLine(ex);
                 return false;
             }
 

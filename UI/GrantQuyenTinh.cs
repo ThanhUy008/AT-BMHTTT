@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UIPhanHe1
+namespace UIPhanHe1.AT_BMHTTT.UI
 {
-    public partial class ThongTinUser : Form
+    public partial class GrantQuyenTinh : Form
     {
-        public ThongTinUser()
+        public GrantQuyenTinh()
         {
             InitializeComponent();
         }
 
-      
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

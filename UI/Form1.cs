@@ -29,16 +29,7 @@ namespace UIPhanHe1
         private void LoadData()
 
         {
-            String command = "SELECT * FROM BENH_NHAN";
-            DataSet ds = new DataSet();
-            OraDBConnect.Query(command, ds);
-            if (ds.Tables.Count > 0)
-            {
-
-                dataGridView1.DataSource = ds.Tables[0].DefaultView;
-
-            }
-
+           
 
         }
     }

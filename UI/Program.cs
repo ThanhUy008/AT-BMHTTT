@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIPhanHe1.AT_BMHTTT.UI;
 
 namespace UIPhanHe1
 {
@@ -18,7 +19,7 @@ namespace UIPhanHe1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }
