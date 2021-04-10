@@ -43,7 +43,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String command = String.Format("SELECT TABLE_NAME from DBA_TABLES WHERE OWNER = '{0}'", OraDBConnect.UserName);
+            String command = String.Format("SELECT TABLE_NAME from DBA_TABLES WHERE OWNER = '{0}'", OraDBConnect.UserName.ToUpper());
 
             DataSet ds = new DataSet();
             OraDBConnect.Query(command, ds);
@@ -54,15 +54,52 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+
+        private void button6_Click(object sender, EventArgs e)
         {
-            String command = String.Format("SELECT COLUMN_NAME FROM USER_TAB_COLS WHERE TABLE_NAME = '{0}'", comboBox3.Text);
+            String command =  String.Format("SELECT COLUMN_NAME FROM USER_TAB_COLS WHERE TABLE_NAME = '{0}'", comboBox3.Text);
             DataSet ds = new DataSet();
-            OraDBConnect.Query(command, ds);
+            OracleCommand cmd = new OracleCommand(command, OraDBConnect.con);
+            OracleDataAdapter oda = new OracleDataAdapter(cmd);
+            oda.Fill(ds);
+            
             if (ds.Tables.Count > 0)
             {
-                comboBox4.DataSource = ds.Tables[0];
-                comboBox4.DisplayMember = "COLUMN_NAME";
+                checkedListBox1.DataSource = ds.Tables[0];
+                checkedListBox1.DisplayMember = "COLUMN_NAME";
+                checkedListBox1.ValueMember = "COLUMN_NAME";
+
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedIndex > -1)
+            {
+                String temp = comboBox2.Items[comboBox2.SelectedIndex].ToString();
+                if (temp == "SELECT" || temp == "UPDATE")
+                {
+                    checkedListBox1.Enabled = true;
+                }
+                else
+                {
+                    checkedListBox1.Enabled = false;
+                    for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                        checkedListBox1.SetItemCheckState(i, CheckState.Unchecked);
+
+                }
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            List<String> checkedList = new List<String>();
+            foreach (object itemChecked in checkedListBox1.CheckedItems)
+            {
+                DataRowView castedItem = itemChecked as DataRowView;
+
+                checkedList.Add(castedItem["COLUMN_NAME"].ToString());
             }
         }
     }
