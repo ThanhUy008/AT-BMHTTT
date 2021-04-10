@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.OracleClient;
 namespace UIPhanHe1
 {
     public partial class ThongTinUser : Form
@@ -16,14 +16,31 @@ namespace UIPhanHe1
         {
             InitializeComponent();
         }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox2.Checked = !checkBox1.Checked;
-        }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            checkBox1.Checked = !checkBox2.Checked;
+            OracleConnection con = new OracleConnection(OraDBConnect.ConString);
+
+            try
+            {
+                String command = "SELECT USERNAME FROM ALL_USERS";
+                OracleCommand cmd = new OracleCommand(command, con);
+                con.Open();
+                OracleDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    comboBox1.Items.Add(rd[0]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+
         }
     }
 }
