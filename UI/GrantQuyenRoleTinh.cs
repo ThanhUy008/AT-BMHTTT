@@ -60,7 +60,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
             try
             {
-                String command = "SELECT TABLE_NAME from DBA_TABLES WHERE OWNER = 'C##USER'";
+                String command = "SELECT TABLE_NAME from DBA_TABLES WHERE OWNER = 'TRUONG'";
                 OracleCommand cmd = new OracleCommand(command, con);
                 con.Open();
                 OracleDataReader rd = cmd.ExecuteReader();
