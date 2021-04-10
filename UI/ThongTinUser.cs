@@ -24,7 +24,7 @@ namespace UIPhanHe1
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox1.Checked = !checkBou.Checked;
+            checkBox1.Checked = !checkBox2.Checked;
         }
     }
 }
