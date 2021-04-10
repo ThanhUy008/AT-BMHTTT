@@ -10,8 +10,8 @@ namespace UIPhanHe1
 {
     class OraDBConnect
     {
-        public static String ConString = "Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); User Id =truong; Password =root";
-
+        public static String UserName = "c##user";
+        public static String ConString = String.Format("Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); User Id ={0}; Password =root", UserName);
 
         public static bool Query(String command,DataSet ds)
         {
