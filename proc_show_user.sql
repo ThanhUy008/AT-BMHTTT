@@ -5,10 +5,6 @@ begin
     open c1 for select * from dba_users;
 end;
 
---variable v_q refcursor
---exec showAllUser(:v_q)
---print v_q
-
 --show user privillage system
 create or replace procedure showUserPrivSys (username in VARCHAR2, c1 out sys_refcursor)
 is
