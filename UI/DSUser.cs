@@ -16,5 +16,19 @@ namespace UIPhanHe1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String command = "SELECT * FROM BENH_NHAN";
+            DataSet ds = new DataSet();
+            OraDBConnect.Query(command, ds);
+            if (ds.Tables.Count > 0)
+            {
+
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+
+            }
+
+        }
     }
 }

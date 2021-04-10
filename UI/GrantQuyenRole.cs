@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UIPhanHe1
+namespace UIPhanHe1.AT_BMHTTT.UI
 {
-    public partial class ThemSuaXoa : Form
+    public partial class GrantQuyenRole : Form
     {
-        public ThemSuaXoa()
+        public GrantQuyenRole()
         {
             InitializeComponent();
         }
