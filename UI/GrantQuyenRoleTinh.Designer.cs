@@ -48,7 +48,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(295, 279);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 28);
             this.button5.TabIndex = 27;
@@ -58,7 +58,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(427, 193);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 26;
@@ -69,7 +69,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(427, 139);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 25;
@@ -80,7 +80,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(427, 86);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 24;
@@ -92,7 +92,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(140, 193);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(253, 24);
             this.comboBox4.TabIndex = 23;
@@ -122,7 +122,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(140, 142);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(253, 24);
             this.comboBox3.TabIndex = 20;
@@ -143,14 +143,14 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.label1.Location = new System.Drawing.Point(41, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.Size = new System.Drawing.Size(37, 17);
             this.label1.TabIndex = 18;
-            this.label1.Text = "User";
+            this.label1.Text = "Role";
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(427, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 17;
@@ -164,7 +164,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(247, 251);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(144, 21);
             this.checkBox1.TabIndex = 16;
@@ -175,7 +175,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(140, 89);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(253, 24);
             this.comboBox2.TabIndex = 15;
@@ -184,7 +184,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(140, 39);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(253, 24);
             this.comboBox1.TabIndex = 14;
@@ -208,7 +208,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GrantQuyenRoleTinh";
             this.Text = "GrantQuyenRoleTinh";
             this.ResumeLayout(false);

@@ -21,51 +21,26 @@ namespace UIPhanHe1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OracleConnection con = new OracleConnection(OraDBConnect.ConString);
-
-            try
+            String command = "SELECT USERNAME FROM ALL_USERS";
+            DataSet ds = new DataSet();
+            OraDBConnect.Query(command, ds);
+            if (ds.Tables.Count > 0)
             {
-                String command = "SELECT USERNAME FROM ALL_USERS";
-                OracleCommand cmd = new OracleCommand(command, con);
-                con.Open();
-                OracleDataReader rd = cmd.ExecuteReader();
-                while (rd.Read())
-                {
-                    comboBox1.Items.Add(rd[0]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                con.Close();
+                comboBox1.DataSource = ds.Tables[0];
+                comboBox1.DisplayMember = "USERNAME";
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OracleConnection con = new OracleConnection(OraDBConnect.ConString);
+            String command = "SELECT DISTINCT PRIVILEGE FROM DBA_SYS_PRIVS";
 
-            try
+            DataSet ds = new DataSet();
+            OraDBConnect.Query(command, ds);
+            if (ds.Tables.Count > 0)
             {
-                String command = "SELECT DISTINCT PRIVILEGE FROM DBA_SYS_PRIVS";
-                OracleCommand cmd = new OracleCommand(command, con);
-                con.Open();
-                OracleDataReader rd = cmd.ExecuteReader();
-                while (rd.Read())
-                {
-                    comboBox2.Items.Add(rd[0]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                con.Close();
+                comboBox2.DataSource = ds.Tables[0];
+                comboBox2.DisplayMember = "PRIVILEGE";
             }
         }
 

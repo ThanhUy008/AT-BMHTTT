@@ -24,9 +24,7 @@ namespace UIPhanHe1
             OraDBConnect.Query(command, ds);
             if (ds.Tables.Count > 0)
             {
-
                 dataGridView1.DataSource = ds.Tables[0].DefaultView;
-
             }
 
         }

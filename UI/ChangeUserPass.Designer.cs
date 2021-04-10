@@ -42,75 +42,84 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 22);
+            this.label1.Location = new System.Drawing.Point(29, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "UserName";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(115, 19);
+            this.comboBox1.Location = new System.Drawing.Point(153, 23);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 21);
+            this.comboBox1.Size = new System.Drawing.Size(263, 24);
             this.comboBox1.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 50);
+            this.textBox1.Location = new System.Drawing.Point(153, 62);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
+            this.textBox1.Size = new System.Drawing.Size(263, 22);
             this.textBox1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 53);
+            this.label2.Location = new System.Drawing.Point(33, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(99, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "New password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 81);
+            this.label3.Location = new System.Drawing.Point(37, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Confirm";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 77);
+            this.textBox2.Location = new System.Drawing.Point(153, 95);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 20);
+            this.textBox2.Size = new System.Drawing.Size(263, 22);
             this.textBox2.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(328, 19);
+            this.button1.Location = new System.Drawing.Point(437, 23);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 6;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(238, 103);
+            this.button2.Location = new System.Drawing.Point(317, 127);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 7;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // ChangeUserPass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 148);
+            this.ClientSize = new System.Drawing.Size(596, 182);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -119,6 +128,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ChangeUserPass";
             this.Text = "Confirm";
             this.ResumeLayout(false);

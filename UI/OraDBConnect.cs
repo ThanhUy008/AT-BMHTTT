@@ -10,7 +10,7 @@ namespace UIPhanHe1
 {
     class OraDBConnect
     {
-        public static String UserName = "c##user";
+        public static String UserName = "TRUONG";
         public static String ConString = String.Format("Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); User Id ={0}; Password =root", UserName);
 
         public static bool Query(String command,DataSet ds)
@@ -19,17 +19,10 @@ namespace UIPhanHe1
             try
             {
                 using (OracleConnection con = new OracleConnection(ConString))
-
                 {
-
                     OracleCommand cmd = new OracleCommand(command, con);
-
                     OracleDataAdapter oda = new OracleDataAdapter(cmd);
-
-                 //   ds = new DataSet();
-
                     oda.Fill(ds);
-
                 }
             }
             catch (Exception ex)
@@ -38,7 +31,6 @@ namespace UIPhanHe1
                // Console.WriteLine(ex);
                 return false;
             }
-
             return true;
         }
     }

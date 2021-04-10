@@ -21,27 +21,15 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            OracleConnection con = new OracleConnection(OraDBConnect.ConString);
+            String command = "SELECT ROLE FROM DBA_ROLES";
+            DataSet ds = new DataSet();
+            OraDBConnect.Query(command, ds);
+            if (ds.Tables.Count > 0)
+            {
+                comboBox1.DataSource = ds.Tables[0];
+                comboBox1.DisplayMember = "ROLE";
+            }
 
-            try
-            {
-                String command = "SELECT ROLE FROM DBA_ROLES";
-                OracleCommand cmd = new OracleCommand(command, con);
-                con.Open();
-                OracleDataReader rd = cmd.ExecuteReader();
-                while (rd.Read())
-                {
-                    comboBox1.Items.Add(rd[0]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                con.Close();
-            }
         }
     }
 }

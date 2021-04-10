@@ -39,7 +39,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(272, 74);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 13;
@@ -49,7 +49,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(395, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 11;
@@ -61,7 +61,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(108, 27);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(263, 24);
             this.comboBox1.TabIndex = 10;
@@ -79,7 +79,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(395, 74);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 14;
@@ -96,7 +96,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditPrivilegesRole";
             this.Text = "EditPrivilegesRole";
             this.ResumeLayout(false);
