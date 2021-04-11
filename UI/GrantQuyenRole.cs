@@ -42,5 +42,32 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                 comboBox2.DisplayMember = "PRIVILEGE";
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = OraDBConnect.con;
+                if (checkBox1.Checked == false)
+                {
+                    cmd.CommandText = "GRANT_SYS_ROLE";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("priv", OracleType.NVarChar).Value = comboBox2.Text;
+                    cmd.Parameters.Add("role_name", OracleType.NVarChar).Value = comboBox1.Text;
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    cmd.CommandText = String.Format("GRANT {0} TO {1} WITH ADMIN OPTION", comboBox2.Text, comboBox1.Text);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Gán quyền thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

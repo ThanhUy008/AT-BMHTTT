@@ -48,12 +48,8 @@ namespace UIPhanHe1
         {
             try
             {
-                OracleConnection conn = new OracleConnection();
-                conn.ConnectionString = OraDBConnect.ConString;
                 OracleCommand cmd = new OracleCommand();
-                cmd.Connection = conn;
-                
-                conn.Open();
+                cmd.Connection = OraDBConnect.con;
                 if (checkBox1.Checked == false)
                 {
                     cmd.CommandText = "GRANT_SYS_USER";
@@ -64,10 +60,9 @@ namespace UIPhanHe1
                 }
                 else
                 {
-                    cmd.CommandText = String.Format("GRANT {0} TO {1} WITH GRANT OPTION", comboBox2.Text, comboBox1.Text);
+                    cmd.CommandText = String.Format("GRANT {0} TO {1} WITH ADMIN OPTION", comboBox2.Text, comboBox1.Text);
                     cmd.ExecuteNonQuery();
                 }
-                conn.Close();
                 MessageBox.Show("Gán quyền thành công");
             }
             catch (Exception ex)

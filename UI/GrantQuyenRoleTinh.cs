@@ -101,6 +101,83 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
                 checkedList.Add(castedItem["COLUMN_NAME"].ToString());
             }
+
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = OraDBConnect.con;
+                String column = "";
+                if (checkedList.Count != 0)
+                {
+                    for (int i = 0; i < checkedList.Count; i++)
+                    {
+                        column = column + checkedList[i] + ", ";
+                    }
+                    column = column.Remove(column.Length - 1);
+                    column = column.Remove(column.Length - 1);
+                }
+                if (checkedList.Count == 0)
+                {
+                    if (checkBox1.Checked == false)
+                    {
+                        cmd.CommandText = "GRANT_DATA_ROLE";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
+                        cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
+                        cmd.Parameters.Add("role_name", OracleType.NVarChar).Value = comboBox1.Text;
+                        cmd.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        cmd.CommandText = String.Format("GRANT {0} ON {1} TO {2} WITH GRANT OPTION", comboBox2.Text, comboBox3.Text, comboBox1.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                else
+                {
+                    if (comboBox2.Text == "SELECT")
+                    {
+                        cmd.CommandText = String.Format(@"CREATE OR REPLACE VIEW {0}_{2} AS
+                                                        SELECT {1}
+                                                        FROM {0}", comboBox3.Text, column,comboBox1.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    if (checkBox1.Checked == false)
+                    {
+                        if (comboBox2.Text == "SELECT")
+                        {
+                            cmd.CommandText = String.Format("GRANT {0} ON {1}_{2} TO {2}", comboBox2.Text, comboBox3.Text, comboBox1.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            cmd.CommandText = String.Format("GRANT {0} ({1}) ON {2} TO {3}", comboBox2.Text, column, comboBox3.Text, comboBox1.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        if (comboBox2.Text == "SELECT")
+                        {
+                            cmd.CommandText = String.Format("GRANT {0} ON {1}_{2} TO {2} WITH GRANT OPTION", comboBox2.Text, comboBox3.Text, comboBox1.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                        else
+                        {
+                            cmd.CommandText = String.Format("GRANT {0} ({1}) ON {2} TO {3} WITH GRANT OPTION", comboBox2.Text, column, comboBox3.Text, comboBox1.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+
+                }
+                MessageBox.Show("Gán quyền thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

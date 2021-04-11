@@ -48,37 +48,39 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 24);
+            this.comboBox1.Location = new System.Drawing.Point(135, 30);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
+            this.comboBox1.Size = new System.Drawing.Size(253, 24);
             this.comboBox1.TabIndex = 0;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(101, 64);
+            this.comboBox2.Location = new System.Drawing.Point(135, 79);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(191, 21);
+            this.comboBox2.Size = new System.Drawing.Size(253, 24);
             this.comboBox2.TabIndex = 1;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(181, 253);
+            this.checkBox1.Location = new System.Drawing.Point(241, 311);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(111, 17);
+            this.checkBox1.Size = new System.Drawing.Size(144, 21);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "With Grant Option";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(316, 22);
+            this.button1.Location = new System.Drawing.Point(421, 27);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,43 +89,48 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 27);
+            this.label1.Location = new System.Drawing.Point(36, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(38, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "User";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 67);
+            this.label2.Location = new System.Drawing.Point(37, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Privileges";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(101, 107);
+            this.comboBox3.Location = new System.Drawing.Point(135, 132);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(191, 21);
+            this.comboBox3.Size = new System.Drawing.Size(253, 24);
             this.comboBox3.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 110);
+            this.label3.Location = new System.Drawing.Point(37, 135);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.Size = new System.Drawing.Size(44, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Table";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(316, 62);
+            this.button2.Location = new System.Drawing.Point(421, 76);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 10;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = true;
@@ -131,9 +138,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(316, 105);
+            this.button3.Location = new System.Drawing.Point(421, 129);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 11;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
@@ -141,9 +149,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(316, 149);
+            this.button4.Location = new System.Drawing.Point(421, 183);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 12;
             this.button4.Text = "Reset";
             this.button4.UseVisualStyleBackColor = true;
@@ -151,9 +160,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(217, 276);
+            this.button5.Location = new System.Drawing.Point(289, 340);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(100, 28);
             this.button5.TabIndex = 13;
             this.button5.Text = "Grant";
             this.button5.UseVisualStyleBackColor = true;
@@ -162,25 +172,27 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(101, 149);
+            this.checkedListBox1.Location = new System.Drawing.Point(135, 183);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(191, 79);
+            this.checkedListBox1.Size = new System.Drawing.Size(253, 89);
             this.checkedListBox1.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 159);
+            this.label4.Location = new System.Drawing.Point(37, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(62, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "Columns";
             // 
             // GrantQuyenTinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 311);
+            this.ClientSize = new System.Drawing.Size(536, 383);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.button5);
@@ -195,6 +207,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GrantQuyenTinh";
             this.Text = "GrantQuyenTinh";
             this.ResumeLayout(false);

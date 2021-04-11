@@ -29,7 +29,7 @@ namespace UIPhanHe1
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new MainForm());
-                    Console.WriteLine("Done");
+                    OraDBConnect.con.Close();
                 }
             }
             catch (Exception ex)
