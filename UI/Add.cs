@@ -51,10 +51,10 @@ namespace UIPhanHe1
                 {
                     cmd.CommandText = "createRole".ToUpper();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("pi_username", OracleType.NVarChar).Value = textBox1.Text;
+                    cmd.Parameters.Add("pi_rolename", OracleType.NVarChar).Value = textBox1.Text;
                      cmd.ExecuteNonQuery();
                 }
-               
+                MessageBox.Show("Them thanh cong");
             }
             catch (Exception ex)
             {

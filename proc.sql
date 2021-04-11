@@ -8,7 +8,7 @@ BEGIN
 EXECUTE IMMEDIATE('TRUNCATE TABLE justGrantSys');
 
 EXECUTE IMMEDIATE('TRUNCATE TABLE justGrantTab');
-COMMIT;
+
 END beginSession;
 
 /*alter session set container = XEPDB1;*/
@@ -22,7 +22,6 @@ str   VARCHAR2 (1000);
 BEGIN
 str := 'REVOKE ' ||  sys_priv || ' FROM ' || username ;
         	EXECUTE IMMEDIATE ( str );
-            COMMIT;
     
 END;
 /
@@ -36,7 +35,6 @@ str   VARCHAR2 (1000);
 BEGIN
 str := 'REVOKE ' || type_priv|| ' ON ' || tab_name || ' FROM ' || username ;
         	EXECUTE IMMEDIATE ( str );
-            COMMIT;
     
 END;
 /
@@ -46,17 +44,14 @@ CREATE OR REPLACE PROCEDURE grant_sys_user(
 	priv IN NVARCHAR2,
 	user_name IN NVARCHAR2) 
 IS
-var1 NVARCHAR2(1000);
 
 BEGIN
     EXECUTE IMMEDIATE('grant ' || priv || ' to ' || user_name);
-    EXECUTE IMMEDIATE('INSERT INTO justGrantSys VALUES(''' || user_name || ''',User,''' || priv || ''');');
-    DBMS_OUTPUT.put_line('INSERT INTO justGrantSys VALUES(''' || user_name || ''',''User'',''' || priv || ''');');
-    COMMIT;
+    --EXECUTE IMMEDIATE('INSERT INTO justGrantSys VALUES(''' || user_name || ''',User,''' || priv || ''');');
 END grant_sys_user;
 /
-exec grant_sys_user('CREATE ANY TABLE','C##USER')
-INSERT INTO justGrantSys VALUES('C##USER','User','CREATE ANY TABLE');
+--exec grant_sys_user('CREATE ANY TABLE','C##USER')
+--INSERT INTO justGrantSys VALUES('C##USER','User','CREATE ANY TABLE');
 -- grant data priv column to user
 CREATE OR REPLACE PROCEDURE grant_data_user_2(
 	data_priv IN NVARCHAR2,
@@ -73,9 +68,8 @@ BEGIN
     str2:= 'GRANT '|| data_priv || ' ON ' || table_name ||'_' || user_name || ' TO ' || user_name || ' ' || withGrantOption;
     EXECUTE IMMEDIATE(str2);
   
-    EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || user_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''',''' || columnList || ''');');
+    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || user_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''',''' || columnList || ''');');
   
-    COMMIT;
 END grant_data_user_2;
 /
 -- grant data priv to user
@@ -89,9 +83,8 @@ IS
     str varchar2(50);
 BEGIN
     EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || user_name ||' ' || withGrantOption);
-     EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || user_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''');');
+    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || user_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''');');
   
-    COMMIT;
 END grant_data_user;
 /
 
@@ -102,9 +95,8 @@ CREATE OR REPLACE PROCEDURE grant_sys_role(
 IS
 BEGIN
     EXECUTE IMMEDIATE('grant ' || priv || ' to ' || role_name);
-      EXECUTE IMMEDIATE('INSERT INTO justGrantSys VALUES(''' || role_name || ''',''Role'',''' || priv || ''');');
+    --EXECUTE IMMEDIATE('INSERT INTO justGrantSys VALUES(''' || role_name || ''',''Role'',''' || priv || ''');');
   
-    COMMIT;
 END grant_sys_role;
 /
 -- grant data priv to role
@@ -116,9 +108,8 @@ CREATE OR REPLACE PROCEDURE grant_data_role(
 IS
 BEGIN
     EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || role_name || ' ' || withGrantOption);
-     EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || role_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''')');
+    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || role_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''')');
   
-    COMMIT;
 END grant_data_role;
 /
 
@@ -134,9 +125,8 @@ BEGIN
     
     EXECUTE IMMEDIATE('GRANT '|| data_priv || ' ON ' || table_name ||'_' || role_name || ' TO ' || role_name || ' ' || withGrantOption);
     
-    EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || role_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''', ''' || columnList || ''')');
+    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || role_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''', ''' || columnList || ''')');
   
-    COMMIT;
 END grant_data_role2;
 /
 /*
@@ -154,7 +144,6 @@ IS
 BEGIN
         str := 'revoke ' || prige || ' from ' || user_name_role ;
         	EXECUTE IMMEDIATE ( str );
-            commit;
 end revokeUser_role;
 /
 
@@ -171,7 +160,6 @@ BEGIN
         EXECUTE IMMEDIATE (str);
         str := 'CREATE ROLE ' || role_name ;
         	EXECUTE IMMEDIATE ( str );
-            commit;
 end createRole;
 /
 --drop role
@@ -184,7 +172,6 @@ IS
 BEGIN
         str := 'DROP Role ' || role_name  ;
         	EXECUTE IMMEDIATE ( str );
-            commit;
 end DropRole;
 /
 
@@ -260,7 +247,6 @@ BEGIN
         EXECUTE IMMEDIATE (str);
         str := 'CREATE USER ' || user_name || ' IDENTIFIED BY ' || pwd ;
         	EXECUTE IMMEDIATE ( str );
-            commit;
 end createUser;
 
 
@@ -275,7 +261,6 @@ IS
 BEGIN
         str := 'DROP USER ' || user_name  ;
         	EXECUTE IMMEDIATE ( str );
-            commit;
 end DropUser;
 /
 --edit user
@@ -293,23 +278,7 @@ BEGIN
                 TEMPORARY TABLESPACE "TEMP"
                 ACCOUNT UNLOCK ';
         	EXECUTE IMMEDIATE ( str );
-            commit;
 end EditUser;
-/
-
-
-create or replace procedure showAllJustGrantSys (c1 out sys_refcursor)
-is
-begin
-    open c1 for select *  from justGrantSys;
-end;
-/
-
-create or replace procedure showAllJustGrantTab (c1 out sys_refcursor)
-is
-begin
-    open c1 for select *  from justGrantTab;
-end;
 /
 
 
