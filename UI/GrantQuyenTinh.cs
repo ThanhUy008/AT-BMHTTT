@@ -141,7 +141,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                     cmd.CommandText = "grant_data_user_2".ToUpper();
                     cmd.CommandType = CommandType.StoredProcedure;
                    
-                    if (comboBox2.Text == "SELECT" || comboBox2.Text == "UPDATE")
+                    if (comboBox2.Text == "SELECT")
                     {
                         cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
                         cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
