@@ -255,7 +255,6 @@ end createUser;
 create or replace NONEDITIONABLE PROCEDURE DropUser(
 	pi_username IN NVARCHAR2) 
 IS
-	
 	user_name NVARCHAR2(20)  	:= pi_username;
    	str   VARCHAR2 (1000);
 BEGIN

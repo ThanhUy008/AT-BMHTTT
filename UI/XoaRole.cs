@@ -31,5 +31,22 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = OraDBConnect.con;
+                cmd.CommandText = "DROPROLE";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("pi_username", OracleType.NVarChar).Value = comboBox1.Text;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
