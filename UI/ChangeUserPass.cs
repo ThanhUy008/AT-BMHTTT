@@ -43,6 +43,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                     cmd.Parameters.Add("pi_username", OracleType.NVarChar).Value = comboBox1.Text;
                     cmd.Parameters.Add("new_password", OracleType.NVarChar).Value = textBox1.Text;
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Doi pass thanh cong");
                 }
                 else
                 {

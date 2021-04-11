@@ -40,7 +40,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                 cmd.Connection = OraDBConnect.con;
                 cmd.CommandText = "DROPROLE";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("pi_username", OracleType.NVarChar).Value = comboBox1.Text;
+                cmd.Parameters.Add("pi_rolename", OracleType.NVarChar).Value = comboBox1.Text;
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
