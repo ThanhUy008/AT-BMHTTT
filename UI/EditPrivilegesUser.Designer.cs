@@ -36,11 +36,12 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(133, 83);
+            this.button2.Location = new System.Drawing.Point(133, 121);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
@@ -76,7 +77,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(214, 83);
+            this.button3.Location = new System.Drawing.Point(214, 121);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 16;
@@ -93,18 +94,27 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(214, 112);
+            this.button4.Location = new System.Drawing.Point(214, 150);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 18;
             this.button4.Text = "Revoke";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(108, 94);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(181, 21);
+            this.comboBox3.TabIndex = 19;
+            // 
             // EditPrivilegesUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 152);
+            this.ClientSize = new System.Drawing.Size(372, 206);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button3);
@@ -128,5 +138,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

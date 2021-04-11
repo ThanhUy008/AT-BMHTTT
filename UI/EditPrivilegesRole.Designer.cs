@@ -36,16 +36,18 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(81, 83);
+            this.button2.Location = new System.Drawing.Point(81, 104);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -76,12 +78,13 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(204, 83);
+            this.button3.Location = new System.Drawing.Point(204, 104);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 14;
             this.button3.Text = "Edit Tinh";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // comboBox2
             // 
@@ -93,18 +96,28 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(204, 116);
+            this.button4.Location = new System.Drawing.Point(204, 133);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 16;
             this.button4.Text = "Revoke";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(81, 77);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(198, 21);
+            this.comboBox3.TabIndex = 17;
             // 
             // EditPrivilegesRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 151);
+            this.ClientSize = new System.Drawing.Size(376, 199);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button3);
@@ -127,5 +140,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

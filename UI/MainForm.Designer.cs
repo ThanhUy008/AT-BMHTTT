@@ -49,9 +49,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.button11 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -249,38 +246,9 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 347);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Revoke 1 quyen";
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(104, 342);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(74, 23);
-            this.button13.TabIndex = 21;
-            this.button13.Text = "System";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(207, 342);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 22;
-            this.button14.Text = "Tinh";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(104, 381);
+            this.button15.Location = new System.Drawing.Point(103, 346);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(75, 23);
             this.button15.TabIndex = 23;
@@ -290,7 +258,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(207, 381);
+            this.button16.Location = new System.Drawing.Point(206, 346);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(75, 23);
             this.button16.TabIndex = 24;
@@ -301,7 +269,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 381);
+            this.label10.Location = new System.Drawing.Point(15, 346);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(26, 13);
             this.label10.TabIndex = 25;
@@ -311,13 +279,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 416);
+            this.ClientSize = new System.Drawing.Size(312, 386);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button11);
@@ -368,9 +333,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label10;

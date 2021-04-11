@@ -36,7 +36,7 @@ namespace UIPhanHe1
             {
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
             }
-            System.Windows.Forms.MessageBox.Show("Done");
+            
         }
     }
 }
