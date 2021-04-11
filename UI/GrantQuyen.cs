@@ -46,6 +46,34 @@ namespace UIPhanHe1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OracleConnection conn = new OracleConnection();
+                conn.ConnectionString = OraDBConnect.ConString;
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                
+                conn.Open();
+                if (checkBox1.Checked == false)
+                {
+                    cmd.CommandText = "GRANT_SYS_USER";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("priv", OracleType.NVarChar).Value = comboBox2.Text;
+                    cmd.Parameters.Add("user_name", OracleType.NVarChar).Value = comboBox1.Text;
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    cmd.CommandText = String.Format("GRANT {0} TO {1} WITH GRANT OPTION", comboBox2.Text, comboBox1.Text);
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Close();
+                MessageBox.Show("Gán quyền thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
         }
     }
