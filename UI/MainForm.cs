@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.OracleClient;
 namespace UIPhanHe1.AT_BMHTTT.UI
 {
     public partial class MainForm : Form
@@ -144,6 +144,25 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Hide();
             xoaRole.ShowDialog();
             this.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = OraDBConnect.con;
+
+                cmd.CommandText = "beginSession".ToUpper();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+            
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

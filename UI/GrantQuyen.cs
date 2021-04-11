@@ -33,6 +33,7 @@ namespace UIPhanHe1
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             String command = "SELECT DISTINCT PRIVILEGE FROM DBA_SYS_PRIVS";
 
             DataSet ds = new DataSet();

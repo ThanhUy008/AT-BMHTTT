@@ -29,5 +29,65 @@ namespace UIPhanHe1
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = OraDBConnect.con;
+
+                cmd.CommandText = "showUserPrivSys".ToUpper();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("username", OracleType.NVarChar).Value = comboBox1.Text;
+                cmd.Parameters.Add("c1", OracleType.Cursor).Direction = ParameterDirection.Output;
+                cmd.ExecuteNonQuery();
+                DataSet ds = new DataSet();
+                OracleDataAdapter oda = new OracleDataAdapter();
+                oda.SelectCommand = cmd;
+                oda.Fill(ds);
+                if (ds.Tables.Count > 0)
+                {
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.Refresh();
+                    dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = OraDBConnect.con;
+
+                cmd.CommandText = "showUserPrivTab".ToUpper();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("username", OracleType.NVarChar).Value = comboBox1.Text;
+                cmd.Parameters.Add("c1", OracleType.Cursor).Direction = ParameterDirection.Output;
+                cmd.ExecuteNonQuery();
+                DataSet ds = new DataSet();
+                OracleDataAdapter oda = new OracleDataAdapter();
+                oda.SelectCommand = cmd;
+                oda.Fill(ds);
+                if (ds.Tables.Count > 0)
+                {
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.Refresh();
+                    dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

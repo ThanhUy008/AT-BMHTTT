@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.OracleClient;
 namespace UIPhanHe1.AT_BMHTTT.UI
 {
     public partial class ChangeUserPass : Form
@@ -26,6 +26,32 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             {
                 comboBox1.DataSource = ds.Tables[0];
                 comboBox1.DisplayMember = "USERNAME";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox1.Text == textBox2.Text)
+                {
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = OraDBConnect.con;
+
+                    cmd.CommandText = "EditUser".ToUpper();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("pi_username", OracleType.NVarChar).Value = comboBox1.Text;
+                    cmd.Parameters.Add("new_password", OracleType.NVarChar).Value = textBox1.Text;
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    MessageBox.Show("Nhap lai mat khau sai");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

@@ -256,7 +256,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 13);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Chinh sua quyen";
+            this.label9.Text = "Revoke 1 quyen";
             // 
             // button13
             // 
@@ -264,7 +264,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(74, 23);
             this.button13.TabIndex = 21;
-            this.button13.Text = "User";
+            this.button13.Text = "System";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -274,7 +274,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(75, 23);
             this.button14.TabIndex = 22;
-            this.button14.Text = "Role";
+            this.button14.Text = "Tinh";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
@@ -340,6 +340,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Controls.Add(this.button1);
             this.Name = "MainForm";
             this.Text = "D";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
