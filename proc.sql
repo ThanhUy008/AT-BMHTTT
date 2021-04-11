@@ -36,11 +36,8 @@ CREATE OR REPLACE PROCEDURE grant_sys_user(
 	priv IN NVARCHAR2,
 	user_name IN NVARCHAR2) 
 IS
-var1 NVARCHAR2(1000);
-
 BEGIN
     EXECUTE IMMEDIATE('grant ' || priv || ' to ' || user_name);
-    
 END grant_sys_user;
 /
 -- grant data priv column to user
@@ -67,14 +64,11 @@ END grant_data_user_2;
 CREATE OR REPLACE PROCEDURE grant_data_user(
 	data_priv IN NVARCHAR2,
     table_name IN NVARCHAR2,
-	user_name IN NVARCHAR2,
-    withGrantOption IN NVARCHAR2
+	user_name IN NVARCHAR2
     ) 
 IS
-    str varchar2(50);
 BEGIN
-    EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || user_name ||' ' || withGrantOption);
-     
+    EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || user_name);
 END grant_data_user;
 /
 
@@ -92,11 +86,11 @@ END grant_sys_role;
 CREATE OR REPLACE PROCEDURE grant_data_role(
 	data_priv IN NVARCHAR2,
     table_name IN NVARCHAR2,
-	role_name IN NVARCHAR2,
-    withGrantOption IN NVARCHAR2)
+	role_name IN NVARCHAR2
+    )
 IS
 BEGIN
-    EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || role_name || ' ' || withGrantOption);
+    EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || role_name);
    
 END grant_data_role;
 /
