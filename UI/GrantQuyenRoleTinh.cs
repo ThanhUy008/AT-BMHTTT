@@ -94,7 +94,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            String withGrantOption = "";
 
             List<String> checkedList = new List<String>();
             foreach (object itemChecked in checkedListBox1.CheckedItems)
@@ -102,10 +101,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                 DataRowView castedItem = itemChecked as DataRowView;
 
                 checkedList.Add(castedItem["COLUMN_NAME"].ToString());
-            }
-            if (checkBox1.Checked == true)
-            {
-                withGrantOption = " WITH GRANT OPTION";
             }
             try
             {
@@ -122,36 +117,14 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                     column = column.Remove(column.Length - 1);
                 }
                
-                if(checkedList.Count != 0)
-                {
-                    cmd.CommandText = "grant_data_role2".ToUpper();
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
-                    cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
-                    cmd.Parameters.Add("role_name", OracleType.NVarChar).Value = comboBox1.Text;
-                    cmd.Parameters.Add("withGrantOption", OracleType.NVarChar).Value = withGrantOption;
-                    cmd.Parameters.Add("columnList", OracleType.NVarChar).Value = column;
 
-                }
-                else
+                for (int i = 0; i < checkedList.Count; i++)
                 {
-                    cmd.CommandText = "GRANT_DATA_ROLE";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
-                    cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
-                    cmd.Parameters.Add("role_name", OracleType.NVarChar).Value = comboBox1.Text;
-                    cmd.Parameters.Add("withGrantOption", OracleType.NVarChar).Value = withGrantOption;
-
-                   
+                    column = column + checkedList[i] + ", ";
                 }
-                cmd.ExecuteNonQuery();
-                /*    for (int i = 0; i < checkedList.Count; i++)
-                    {
-                        column = column + checkedList[i] + ", ";
-                    }
-                    column = column.Remove(column.Length - 1);
-                    column = column.Remove(column.Length - 1);
-                }
+                column = column.Remove(column.Length - 1);
+                column = column.Remove(column.Length - 1);
+                
                 if (checkedList.Count == 0)
                 {
                     if (checkBox1.Checked == false)
@@ -205,9 +178,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                             cmd.ExecuteNonQuery();
                         }
                     }
-
-
-                }*/
+                }
                 MessageBox.Show("Gán quyền thành công");
             }
             catch (Exception ex)
