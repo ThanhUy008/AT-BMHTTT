@@ -116,17 +116,12 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                     column = column.Remove(column.Length - 1);
                     column = column.Remove(column.Length - 1);
                 }
-                if (checkBox1.Checked == false)
+                if (checkBox1.Checked == true)
                 {
                     withGrantOption = " WITH GRANT OPTION";
                 }
-                else
-                {
-
-                }
                 if (checkedList.Count == 0)
                 {
-
                     cmd.CommandText = "GRANT_DATA_USER";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
@@ -147,7 +142,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                         cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
                         cmd.Parameters.Add("user_name", OracleType.NVarChar).Value = comboBox1.Text;
                         cmd.Parameters.Add("columnList", OracleType.NVarChar).Value = column;
-
                         cmd.Parameters.Add("withGrantOption", OracleType.NVarChar).Value = withGrantOption;
                         
                     }

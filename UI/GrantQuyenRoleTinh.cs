@@ -103,13 +103,9 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
                 checkedList.Add(castedItem["COLUMN_NAME"].ToString());
             }
-            if (checkBox1.Checked == false)
+            if (checkBox1.Checked == true)
             {
                 withGrantOption = " WITH GRANT OPTION";
-            }
-            else
-            {
-
             }
             try
             {
