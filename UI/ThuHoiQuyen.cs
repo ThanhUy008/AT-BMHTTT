@@ -44,21 +44,21 @@ namespace UIPhanHe1
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox3.Checked = !checkBox4.Checked;
+            checkBox4.Checked = !checkBox3.Checked;
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox4.Checked = !checkBox3.Checked;
+            checkBox3.Checked = !checkBox4.Checked;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String command = "SELECT DISTINCT PRIVILEGE FROM DBA_SYS_PRIVS";
+            String command =String.Format("SELECT DISTINCT PRIVILEGE FROM DBA_SYS_PRIVS WHERE GRANTEE ='{0}'",comboBox1.Text) ;
 
             DataSet ds = new DataSet();
             OraDBConnect.Query(command, ds);
-            if (ds.Tables.Count > 0)
+            //if (ds.Tables.Count > 0)
             {
                 comboBox2.DataSource = ds.Tables[0];
                 comboBox2.DisplayMember = "PRIVILEGE";

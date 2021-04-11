@@ -46,19 +46,19 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(233, 39);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(48, 17);
             this.checkBox4.TabIndex = 12;
             this.checkBox4.Text = "Role";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.UseVisualStyleBackColor = false;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(178, 39);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(48, 17);
@@ -96,7 +96,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(295, 103);
+            this.button3.Location = new System.Drawing.Point(287, 103);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
@@ -106,7 +106,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(295, 60);
+            this.button2.Location = new System.Drawing.Point(287, 60);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 17;

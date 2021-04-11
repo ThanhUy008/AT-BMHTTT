@@ -43,13 +43,13 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox3.Checked = !checkBox4.Checked;
+            checkBox4.Checked = !checkBox3.Checked;
             
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox4.Checked = !checkBox3.Checked;
+            checkBox3.Checked = !checkBox4.Checked;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -85,13 +85,13 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String command = String.Format("SELECT TABLE_NAME from DBA_TABLES WHERE OWNER = '{0}'", OraDBConnect.UserName.ToUpper());
+            String command = String.Format(@"SELECT VIEW_NAME FROM DBA_VIEWS WHERE VIEW_NAME like '%{0}%'",comboBox1.Text);
             DataSet ds = new DataSet();
             OraDBConnect.Query(command, ds);
             if (ds.Tables.Count > 0)
             {
                 comboBox3.DataSource = ds.Tables[0];
-                comboBox3.DisplayMember = "TABLE_NAME";
+                comboBox3.DisplayMember = "VIEW_NAME";
             }
         }
     }

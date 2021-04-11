@@ -91,18 +91,26 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button10_Click(object sender, EventArgs e)
         {
-            ThuHoiQuyenUser revokeUser = new ThuHoiQuyenUser();
+            /*ThuHoiQuyenUser revokeUser = new ThuHoiQuyenUser();
             this.Hide();
             revokeUser.ShowDialog();
             this.Show();
+            */
+            ThuHoiQuyen revokeUser = new ThuHoiQuyen();
+            this.Hide();
+            revokeUser.ShowDialog();
+            this.Show();
+            
+
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            ThuHoiQuyenRole revokeRole = new ThuHoiQuyenRole();
+           ThuHoiQuyenTinh revokeRole = new ThuHoiQuyenTinh();
             this.Hide();
             revokeRole.ShowDialog();
             this.Show();
+          
         }
 
         private void button12_Click(object sender, EventArgs e)
