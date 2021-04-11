@@ -2,14 +2,6 @@
 /*
 This is to create a view
 */
-CREATE OR REPLACE PROCEDURE beginSession
-IS
-BEGIN
-EXECUTE IMMEDIATE('TRUNCATE TABLE justGrantSys');
-
-EXECUTE IMMEDIATE('TRUNCATE TABLE justGrantTab');
-
-END beginSession;
 
 /*alter session set container = XEPDB1;*/
 /
@@ -22,6 +14,7 @@ str   VARCHAR2 (1000);
 BEGIN
 str := 'REVOKE ' ||  sys_priv || ' FROM ' || username ;
         	EXECUTE IMMEDIATE ( str );
+             
     
 END;
 /
@@ -38,20 +31,18 @@ str := 'REVOKE ' || type_priv|| ' ON ' || tab_name || ' FROM ' || username ;
     
 END;
 /
-
 -- grant sys priv to user
 CREATE OR REPLACE PROCEDURE grant_sys_user(
 	priv IN NVARCHAR2,
 	user_name IN NVARCHAR2) 
 IS
+var1 NVARCHAR2(1000);
 
 BEGIN
     EXECUTE IMMEDIATE('grant ' || priv || ' to ' || user_name);
-    --EXECUTE IMMEDIATE('INSERT INTO justGrantSys VALUES(''' || user_name || ''',User,''' || priv || ''');');
+    
 END grant_sys_user;
 /
---exec grant_sys_user('CREATE ANY TABLE','C##USER')
---INSERT INTO justGrantSys VALUES('C##USER','User','CREATE ANY TABLE');
 -- grant data priv column to user
 CREATE OR REPLACE PROCEDURE grant_data_user_2(
 	data_priv IN NVARCHAR2,
@@ -68,8 +59,8 @@ BEGIN
     str2:= 'GRANT '|| data_priv || ' ON ' || table_name ||'_' || user_name || ' TO ' || user_name || ' ' || withGrantOption;
     EXECUTE IMMEDIATE(str2);
   
-    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || user_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''',''' || columnList || ''');');
   
+     
 END grant_data_user_2;
 /
 -- grant data priv to user
@@ -83,8 +74,7 @@ IS
     str varchar2(50);
 BEGIN
     EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || user_name ||' ' || withGrantOption);
-    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || user_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''');');
-  
+     
 END grant_data_user;
 /
 
@@ -95,8 +85,7 @@ CREATE OR REPLACE PROCEDURE grant_sys_role(
 IS
 BEGIN
     EXECUTE IMMEDIATE('grant ' || priv || ' to ' || role_name);
-    --EXECUTE IMMEDIATE('INSERT INTO justGrantSys VALUES(''' || role_name || ''',''Role'',''' || priv || ''');');
-  
+    
 END grant_sys_role;
 /
 -- grant data priv to role
@@ -108,8 +97,7 @@ CREATE OR REPLACE PROCEDURE grant_data_role(
 IS
 BEGIN
     EXECUTE IMMEDIATE('grant ' || data_priv || ' on '|| table_name || ' to ' || role_name || ' ' || withGrantOption);
-    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || role_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''')');
-  
+   
 END grant_data_role;
 /
 
@@ -125,8 +113,7 @@ BEGIN
     
     EXECUTE IMMEDIATE('GRANT '|| data_priv || ' ON ' || table_name ||'_' || role_name || ' TO ' || role_name || ' ' || withGrantOption);
     
-    --EXECUTE IMMEDIATE('INSERT INTO justGrantTab VALUES(''' || role_name || ''',''User'',''' || data_priv || ''',''' || table_name || ''', ''' || columnList || ''')');
-  
+   
 END grant_data_role2;
 /
 /*
@@ -144,6 +131,7 @@ IS
 BEGIN
         str := 'revoke ' || prige || ' from ' || user_name_role ;
         	EXECUTE IMMEDIATE ( str );
+             
 end revokeUser_role;
 /
 
@@ -160,6 +148,7 @@ BEGIN
         EXECUTE IMMEDIATE (str);
         str := 'CREATE ROLE ' || role_name ;
         	EXECUTE IMMEDIATE ( str );
+             
 end createRole;
 /
 --drop role
@@ -172,6 +161,7 @@ IS
 BEGIN
         str := 'DROP Role ' || role_name  ;
         	EXECUTE IMMEDIATE ( str );
+             
 end DropRole;
 /
 
@@ -247,6 +237,7 @@ BEGIN
         EXECUTE IMMEDIATE (str);
         str := 'CREATE USER ' || user_name || ' IDENTIFIED BY ' || pwd ;
         	EXECUTE IMMEDIATE ( str );
+             
 end createUser;
 
 
@@ -255,11 +246,13 @@ end createUser;
 create or replace NONEDITIONABLE PROCEDURE DropUser(
 	pi_username IN NVARCHAR2) 
 IS
+	
 	user_name NVARCHAR2(20)  	:= pi_username;
    	str   VARCHAR2 (1000);
 BEGIN
         str := 'DROP USER ' || user_name  ;
         	EXECUTE IMMEDIATE ( str );
+             
 end DropUser;
 /
 --edit user
@@ -277,10 +270,12 @@ BEGIN
                 TEMPORARY TABLESPACE "TEMP"
                 ACCOUNT UNLOCK ';
         	EXECUTE IMMEDIATE ( str );
+             
 end EditUser;
 /
 
-
-
-
-
+SELECT USERNAME FROM ALL_USERS
+SELECT * from DBA_TABLES WHERE OWNER = 'C##USER'
+select * from dba_views
+SELECT DISTINCT * FROM DBA_SYS_PRIVS
+SELECT VIEW_NAME FROM DBA_VIEWS WHERE VIEW_NAME like 'C##TRUONG'
