@@ -117,6 +117,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
                 if (checkedList.Count == 0)
                 {
+
                     if (checkBox1.Checked == false)
                     {
                         cmd.CommandText = "GRANT_DATA_USER";
