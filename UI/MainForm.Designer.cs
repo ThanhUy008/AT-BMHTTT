@@ -56,9 +56,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(102, 27);
+            this.button1.Location = new System.Drawing.Point(136, 33);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 23);
+            this.button1.Size = new System.Drawing.Size(240, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Xem DS User";
             this.button1.UseVisualStyleBackColor = true;
@@ -67,17 +68,19 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 78);
+            this.label1.Location = new System.Drawing.Point(17, 96);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thong tin quyen";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(103, 73);
+            this.button2.Location = new System.Drawing.Point(137, 90);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 2;
             this.button2.Text = "User";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,9 +88,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(207, 73);
+            this.button3.Location = new System.Drawing.Point(276, 90);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 3;
             this.button3.Text = "Role";
             this.button3.UseVisualStyleBackColor = true;
@@ -96,26 +100,29 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 32);
+            this.label2.Location = new System.Drawing.Point(17, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "DS user";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 118);
+            this.label3.Location = new System.Drawing.Point(21, 145);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Them moi";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(102, 113);
+            this.button4.Location = new System.Drawing.Point(136, 139);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(180, 23);
+            this.button4.Size = new System.Drawing.Size(240, 28);
             this.button4.TabIndex = 6;
             this.button4.Text = "Them User/Role";
             this.button4.UseVisualStyleBackColor = true;
@@ -124,17 +131,19 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 157);
+            this.label4.Location = new System.Drawing.Point(21, 193);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.Size = new System.Drawing.Size(98, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Doi Pass User";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(102, 152);
+            this.button5.Location = new System.Drawing.Point(136, 187);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(179, 23);
+            this.button5.Size = new System.Drawing.Size(239, 28);
             this.button5.TabIndex = 8;
             this.button5.Text = "Đổi pass User";
             this.button5.UseVisualStyleBackColor = true;
@@ -143,17 +152,19 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 195);
+            this.label5.Location = new System.Drawing.Point(21, 240);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.Size = new System.Drawing.Size(78, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Grant User";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(102, 190);
+            this.button6.Location = new System.Drawing.Point(136, 234);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(100, 28);
             this.button6.TabIndex = 10;
             this.button6.Text = "System Privilges";
             this.button6.UseVisualStyleBackColor = true;
@@ -161,9 +172,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(206, 190);
+            this.button7.Location = new System.Drawing.Point(275, 234);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(100, 28);
             this.button7.TabIndex = 11;
             this.button7.Text = "Data";
             this.button7.UseVisualStyleBackColor = true;
@@ -172,17 +184,19 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 234);
+            this.label6.Location = new System.Drawing.Point(17, 288);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(77, 17);
             this.label6.TabIndex = 12;
             this.label6.Text = "Grant Role";
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(206, 229);
+            this.button9.Location = new System.Drawing.Point(275, 282);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(100, 28);
             this.button9.TabIndex = 14;
             this.button9.Text = "Data";
             this.button9.UseVisualStyleBackColor = true;
@@ -190,9 +204,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(102, 229);
+            this.button8.Location = new System.Drawing.Point(136, 282);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(100, 28);
             this.button8.TabIndex = 13;
             this.button8.Text = "System Privilges";
             this.button8.UseVisualStyleBackColor = true;
@@ -201,46 +216,51 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 275);
+            this.label7.Location = new System.Drawing.Point(16, 338);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.Size = new System.Drawing.Size(99, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "Thu hồi quyền";
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(103, 270);
+            this.button10.Location = new System.Drawing.Point(137, 332);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(100, 28);
             this.button10.TabIndex = 16;
-            this.button10.Text = "User";
+            this.button10.Text = "Sys";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(206, 270);
+            this.button11.Location = new System.Drawing.Point(275, 332);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.Size = new System.Drawing.Size(100, 28);
             this.button11.TabIndex = 17;
-            this.button11.Text = "Role";
+            this.button11.Text = "Table";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 310);
+            this.label8.Location = new System.Drawing.Point(16, 382);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.Size = new System.Drawing.Size(129, 17);
             this.label8.TabIndex = 18;
             this.label8.Text = "Các quyền vừa cấp";
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(150, 305);
+            this.button12.Location = new System.Drawing.Point(200, 375);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.Size = new System.Drawing.Size(100, 28);
             this.button12.TabIndex = 19;
             this.button12.Text = "Xem";
             this.button12.UseVisualStyleBackColor = true;
@@ -248,9 +268,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(103, 346);
+            this.button15.Location = new System.Drawing.Point(137, 426);
+            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.Size = new System.Drawing.Size(100, 28);
             this.button15.TabIndex = 23;
             this.button15.Text = "User";
             this.button15.UseVisualStyleBackColor = true;
@@ -258,9 +279,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(206, 346);
+            this.button16.Location = new System.Drawing.Point(275, 426);
+            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.Size = new System.Drawing.Size(100, 28);
             this.button16.TabIndex = 24;
             this.button16.Text = "Role";
             this.button16.UseVisualStyleBackColor = true;
@@ -269,17 +291,18 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 346);
+            this.label10.Location = new System.Drawing.Point(20, 426);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 13);
+            this.label10.Size = new System.Drawing.Size(33, 17);
             this.label10.TabIndex = 25;
             this.label10.Text = "Xoá";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 386);
+            this.ClientSize = new System.Drawing.Size(416, 475);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -303,6 +326,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "D";
             this.Load += new System.EventHandler(this.MainForm_Load);

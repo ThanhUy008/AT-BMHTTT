@@ -115,16 +115,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                     }
                     column = column.Remove(column.Length - 1);
                     column = column.Remove(column.Length - 1);
-
-
-
-                    for (int i = 0; i < checkedList.Count; i++)
-                    {
-                        column = column + checkedList[i] + ", ";
-                    }
-                    column = column.Remove(column.Length - 1);
-                    column = column.Remove(column.Length - 1);
-
                 }
                 if (checkedList.Count == 0)
                 {

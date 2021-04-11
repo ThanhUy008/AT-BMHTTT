@@ -104,7 +104,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = OraDBConnect.con;
                 String column = "";
-                String withGrantOption = "";
                 if (checkedList.Count != 0)
                 {
                     for (int i = 0; i < checkedList.Count; i++)
@@ -173,8 +172,8 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
 
 
-                    MessageBox.Show("Gán quyền thành công");
                 }
+                MessageBox.Show("Gán quyền thành công");
             }
             catch (Exception ex)
             {
