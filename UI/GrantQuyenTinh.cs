@@ -180,47 +180,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             {
                 MessageBox.Show(ex.ToString());
             }
-            //    if (checkBox1.Checked == true)
-            //    {
-            //        withGrantOption = " WITH GRANT OPTION";
-            //    }
-            //    if (checkedList.Count == 0)
-            //    {
-            //        cmd.CommandText = "GRANT_DATA_USER";
-            //        cmd.CommandType = CommandType.StoredProcedure;
-            //        cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
-            //        cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
-            //        cmd.Parameters.Add("user_name", OracleType.NVarChar).Value = comboBox1.Text;
-            //        cmd.Parameters.Add("withGrantOption", OracleType.NVarChar).Value = withGrantOption;
-
-            //        cmd.ExecuteNonQuery();
-            //    }
-            //    else
-            //    {
-            //        cmd.CommandText = "grant_data_user_2".ToUpper();
-            //        cmd.CommandType = CommandType.StoredProcedure;
-
-            //        if (comboBox2.Text == "SELECT" || comboBox2.Text == "UPDATE")
-            //        {
-            //            cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
-            //            cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
-            //            cmd.Parameters.Add("user_name", OracleType.NVarChar).Value = comboBox1.Text;
-            //            cmd.Parameters.Add("columnList", OracleType.NVarChar).Value = column;
-            //            cmd.Parameters.Add("withGrantOption", OracleType.NVarChar).Value = withGrantOption;
-
-            //        }
-            //        else
-            //        {
-            //            cmd.CommandText = "GRANT_DATA_USER";
-            //            cmd.CommandType = CommandType.StoredProcedure;
-            //            cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
-            //            cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
-            //            cmd.Parameters.Add("user_name", OracleType.NVarChar).Value = comboBox1.Text;
-            //            cmd.Parameters.Add("withGrantOption", OracleType.NVarChar).Value = withGrantOption;
-            //        }
-
-            //        cmd.ExecuteNonQuery();
-            //    }    
         }
     }
 }
