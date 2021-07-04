@@ -12,30 +12,30 @@ using System.Data.OracleClient;
 
 namespace UIPhanHe1.AT_BMHTTT.UI
 {
-    public partial class GrantQuyenRoleTinh : Form
+    public partial class GrantQuyenTinh : Form
     {
-        public GrantQuyenRoleTinh()
+        public GrantQuyenTinh()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String command = "SELECT ROLE FROM DBA_ROLES";
+            String command = "SELECT USERNAME FROM ALL_USERS";
             DataSet ds = new DataSet();
             OraDBConnect.Query(command, ds);
             if (ds.Tables.Count > 0)
             {
                 comboBox1.DataSource = ds.Tables[0];
-                comboBox1.DisplayMember = "ROLE";
+                comboBox1.DisplayMember = "USERNAME";
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             string[] priv = { "SELECT", "INSERT", "UPDATE", "DELETE" };
-
-            for (int i = 0; i < priv.Length; i++)
+            if(comboBox2.Items.Count == 0)
+            for (int i = 0; i < priv.Length; i++) 
             {
                 comboBox2.Items.Add(priv[i]);
             }
@@ -44,7 +44,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
         private void button3_Click(object sender, EventArgs e)
         {
             String command = String.Format("SELECT TABLE_NAME from DBA_TABLES WHERE OWNER = '{0}'", OraDBConnect.UserName.ToUpper());
-
             DataSet ds = new DataSet();
             OraDBConnect.Query(command, ds);
             if (ds.Tables.Count > 0)
@@ -54,15 +53,14 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             }
         }
 
-
-        private void button6_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            String command =  String.Format("SELECT COLUMN_NAME FROM USER_TAB_COLS WHERE TABLE_NAME = '{0}'", comboBox3.Text);
+            String command = String.Format("SELECT COLUMN_NAME FROM USER_TAB_COLS WHERE TABLE_NAME = '{0}'", comboBox3.Text);
             DataSet ds = new DataSet();
             OracleCommand cmd = new OracleCommand(command, OraDBConnect.con);
             OracleDataAdapter oda = new OracleDataAdapter(cmd);
             oda.Fill(ds);
-            
+
             if (ds.Tables.Count > 0)
             {
                 checkedListBox1.DataSource = ds.Tables[0];
@@ -94,7 +92,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button5_Click(object sender, EventArgs e)
         {
-
             List<String> checkedList = new List<String>();
             foreach (object itemChecked in checkedListBox1.CheckedItems)
             {
@@ -116,15 +113,13 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                     column = column.Remove(column.Length - 1);
                     column = column.Remove(column.Length - 1);
                 }
+
                 if (checkedList.Count == 0)
                 {
+
                     if (checkBox1.Checked == false)
                     {
-                        cmd.CommandText = "GRANT_DATA_ROLE";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("data_priv", OracleType.NVarChar).Value = comboBox2.Text;
-                        cmd.Parameters.Add("table_name", OracleType.NVarChar).Value = comboBox3.Text;
-                        cmd.Parameters.Add("role_name", OracleType.NVarChar).Value = comboBox1.Text;
+                        cmd.CommandText = String.Format("GRANT {0} ON {1} TO {2}", comboBox2.Text, comboBox3.Text, comboBox1.Text);
                         cmd.ExecuteNonQuery();
                     }
                     else
@@ -133,13 +128,14 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 else
                 {
                     if (comboBox2.Text == "SELECT")
                     {
                         cmd.CommandText = String.Format(@"CREATE OR REPLACE VIEW {0}_{2} AS
-                                                        SELECT {1}
-                                                        FROM {0}", comboBox3.Text, column,comboBox1.Text);
+                                                             SELECT {1}
+                                                             FROM {0}", comboBox3.Text, column, comboBox1.Text);
                         cmd.ExecuteNonQuery();
                     }
 
@@ -169,8 +165,14 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                             cmd.ExecuteNonQuery();
                         }
                     }
+
+
+
                 }
                 MessageBox.Show("Gán quyền thành công");
+                comboBox1.SelectedIndex = -1;
+                comboBox2.SelectedIndex = -1;
+                comboBox3.SelectedIndex = -1;
             }
             catch (Exception ex)
             {

@@ -9,29 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OracleClient;
 
-namespace UIPhanHe1.AT_BMHTTT.UI
+
+namespace UIPhanHe1
 {
-    public partial class GrantQuyenRole : Form
+    public partial class GrantQuyen : Form
     {
-        public GrantQuyenRole()
+        public GrantQuyen()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String command = "SELECT ROLE FROM DBA_ROLES";
+            String command = "SELECT USERNAME FROM ALL_USERS";
             DataSet ds = new DataSet();
             OraDBConnect.Query(command, ds);
             if (ds.Tables.Count > 0)
             {
                 comboBox1.DataSource = ds.Tables[0];
-                comboBox1.DisplayMember = "ROLE";
+                comboBox1.DisplayMember = "USERNAME";
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             String command = "SELECT DISTINCT PRIVILEGE FROM DBA_SYS_PRIVS";
 
             DataSet ds = new DataSet();
@@ -51,10 +53,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                 cmd.Connection = OraDBConnect.con;
                 if (checkBox1.Checked == false)
                 {
-                    cmd.CommandText = "GRANT_SYS_ROLE";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("priv", OracleType.NVarChar).Value = comboBox2.Text;
-                    cmd.Parameters.Add("role_name", OracleType.NVarChar).Value = comboBox1.Text;
+                    cmd.CommandText = String.Format("GRANT {0} TO {1}", comboBox2.Text, comboBox1.Text);
                     cmd.ExecuteNonQuery();
                 }
                 else
@@ -63,11 +62,14 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                     cmd.ExecuteNonQuery();
                 }
                 MessageBox.Show("Gán quyền thành công");
+                comboBox1.SelectedIndex = -1;
+                comboBox2.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
         }
     }
 }

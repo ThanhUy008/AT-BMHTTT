@@ -41,20 +41,21 @@ namespace UIPhanHe1
                 cmd.Connection = OraDBConnect.con;
                 if (checkBox1.Checked == true)
                 {
-                    cmd.CommandText = "createUser".ToUpper();
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("pi_username", OracleType.NVarChar).Value = textBox1.Text;
-                    cmd.Parameters.Add("pi_password", OracleType.NVarChar).Value = textBox2.Text;
+                    cmd.CommandText = "ALTER SESSION SET \"_ORACLE_SCRIPT\"=true";
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = String.Format("create user {0} identified by {1}", textBox1.Text, textBox2.Text).ToUpper();
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
-                    cmd.CommandText = "createRole".ToUpper();
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("pi_rolename", OracleType.NVarChar).Value = textBox1.Text;
-                     cmd.ExecuteNonQuery();
+                    cmd.CommandText = "ALTER SESSION SET \"_ORACLE_SCRIPT\"=true";
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = String.Format("create role {0}", textBox1.Text).ToUpper();
+                    cmd.ExecuteNonQuery();
                 }
                 MessageBox.Show("Them thanh cong");
+                textBox1.Clear();
+                textBox2.Clear();
             }
             catch (Exception ex)
             {

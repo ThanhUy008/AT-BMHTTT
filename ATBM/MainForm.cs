@@ -91,17 +91,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button10_Click(object sender, EventArgs e)
         {
-            /*ThuHoiQuyenUser revokeUser = new ThuHoiQuyenUser();
-            this.Hide();
-            revokeUser.ShowDialog();
-            this.Show();
-            */
             ThuHoiQuyen revokeUser = new ThuHoiQuyen();
             this.Hide();
             revokeUser.ShowDialog();
             this.Show();
-            
-
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -129,13 +122,13 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Show();
         }
 
-        private void button14_Click(object sender, EventArgs e)
-        {
-            EditPrivilegesRole editRole = new EditPrivilegesRole();
-            this.Hide();
-            editRole.ShowDialog();
-            this.Show();
-        }
+        //private void button14_Click(object sender, EventArgs e)
+        //{
+        //    EditPrivilegesRole editRole = new EditPrivilegesRole();
+        //    this.Hide();
+        //    editRole.ShowDialog();
+        //    this.Show();
+        //}
 
         private void button15_Click(object sender, EventArgs e)
         {
@@ -172,5 +165,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             //    MessageBox.Show(ex.ToString());
             //}
         }
+
+       
     }
 }

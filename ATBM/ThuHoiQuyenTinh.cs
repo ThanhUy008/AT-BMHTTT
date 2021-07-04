@@ -59,13 +59,12 @@ namespace UIPhanHe1.AT_BMHTTT.UI
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = OraDBConnect.con;
 
-                cmd.CommandText = "revokeUserTablePriv".ToUpper();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("username", OracleType.NVarChar).Value = comboBox1.Text;
-                cmd.Parameters.Add("type_priv", OracleType.NVarChar).Value = comboBox2.Text;
-                cmd.Parameters.Add("tab_name", OracleType.NVarChar).Value = comboBox3.Text;
+                cmd.CommandText = String.Format("revoke {0} on {1} from {2}", comboBox2.Text, comboBox3.Text, comboBox1.Text).ToUpper();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("revoke quyền thành công");
+                comboBox1.SelectedIndex = -1;
+                comboBox2.SelectedIndex = -1;
+                comboBox3.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -75,23 +74,27 @@ namespace UIPhanHe1.AT_BMHTTT.UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string[] priv = { "SELECT", "INSERT", "UPDATE", "DELETE" };
-            if (comboBox2.Items.Count == 0)
-                for (int i = 0; i < priv.Length; i++)
-                {
-                    comboBox2.Items.Add(priv[i]);
-                }
+            String command = String.Format("SELECT DISTINCT PRIVILEGE FROM USER_TAB_PRIVS WHERE GRANTEE = '{0}' AND TABLE_NAME = '{1}'", comboBox1.Text.ToUpper(), comboBox3.Text);
+
+            DataSet ds = new DataSet();
+            OraDBConnect.Query(command, ds);
+            if (ds.Tables.Count > 0)
+            {
+                comboBox2.DataSource = ds.Tables[0];
+                comboBox2.DisplayMember = "PRIVILEGE";
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String command = String.Format(@"SELECT VIEW_NAME FROM DBA_VIEWS WHERE VIEW_NAME like '%{0}%'",comboBox1.Text);
+            String command = String.Format("SELECT DISTINCT TABLE_NAME FROM USER_TAB_PRIVS WHERE GRANTEE = '{0}'", comboBox1.Text.ToUpper());
+
             DataSet ds = new DataSet();
             OraDBConnect.Query(command, ds);
             if (ds.Tables.Count > 0)
             {
                 comboBox3.DataSource = ds.Tables[0];
-                comboBox3.DisplayMember = "VIEW_NAME";
+                comboBox3.DisplayMember = "TABLE_NAME";
             }
         }
     }

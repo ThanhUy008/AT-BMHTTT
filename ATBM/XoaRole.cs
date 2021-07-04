@@ -38,10 +38,12 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = OraDBConnect.con;
-                cmd.CommandText = "DROPROLE";
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("pi_rolename", OracleType.NVarChar).Value = comboBox1.Text;
+                cmd.CommandText = "ALTER SESSION SET \"_ORACLE_SCRIPT\"=true";
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = String.Format("drop role {0} ", comboBox1.Text).ToUpper();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xoá thành công");
+                comboBox1.SelectedIndex = -1;
             }
             catch (Exception ex)
             {

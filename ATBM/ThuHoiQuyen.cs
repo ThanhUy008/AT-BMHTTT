@@ -72,12 +72,12 @@ namespace UIPhanHe1
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = OraDBConnect.con;
 
-                cmd.CommandText = "revokeUserSysPriv".ToUpper();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("username", OracleType.NVarChar).Value = comboBox1.Text;
-                cmd.Parameters.Add("sys_priv", OracleType.NVarChar).Value = comboBox2.Text;
+                cmd.CommandText = String.Format("revoke {0} from {1}",comboBox2.Text, comboBox1.Text).ToUpper();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("revoke quyền thành công");
+                comboBox1.SelectedIndex = -1;
+                comboBox2.SelectedIndex = -1;
+
             }
             catch (Exception ex)
             {

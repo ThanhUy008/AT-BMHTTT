@@ -43,26 +43,30 @@ namespace UIPhanHe1
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 102);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(563, 78);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(751, 191);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 35);
+            this.label1.Location = new System.Drawing.Point(16, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(106, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên User(Role)";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(397, 31);
+            this.button1.Location = new System.Drawing.Point(529, 38);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
@@ -71,16 +75,18 @@ namespace UIPhanHe1
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 31);
+            this.comboBox1.Location = new System.Drawing.Point(129, 38);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 21);
+            this.comboBox1.Size = new System.Drawing.Size(375, 24);
             this.comboBox1.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(223, 58);
+            this.button2.Location = new System.Drawing.Point(297, 71);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "Sys";
             this.button2.UseVisualStyleBackColor = true;
@@ -88,9 +94,10 @@ namespace UIPhanHe1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(304, 58);
+            this.button3.Location = new System.Drawing.Point(405, 71);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 6;
             this.button3.Text = "Tab";
             this.button3.UseVisualStyleBackColor = true;
@@ -98,15 +105,16 @@ namespace UIPhanHe1
             // 
             // ThongTinUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 172);
+            this.ClientSize = new System.Drawing.Size(783, 306);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ThongTinUser";
             this.Text = "ThongTinUser";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

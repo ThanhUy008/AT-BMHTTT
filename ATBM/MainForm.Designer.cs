@@ -47,8 +47,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.label7 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,7 +55,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(136, 33);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(240, 28);
             this.button1.TabIndex = 0;
@@ -78,7 +76,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(137, 90);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 2;
@@ -89,7 +87,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(276, 90);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 3;
@@ -120,7 +118,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(136, 139);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(240, 28);
             this.button4.TabIndex = 6;
@@ -141,7 +139,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(136, 187);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(239, 28);
             this.button5.TabIndex = 8;
@@ -162,7 +160,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(136, 234);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 28);
             this.button6.TabIndex = 10;
@@ -173,7 +171,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(275, 234);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 28);
             this.button7.TabIndex = 11;
@@ -194,7 +192,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(275, 282);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 28);
             this.button9.TabIndex = 14;
@@ -205,7 +203,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(136, 282);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(100, 28);
             this.button8.TabIndex = 13;
@@ -226,7 +224,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(137, 332);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(100, 28);
             this.button10.TabIndex = 16;
@@ -237,7 +235,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(275, 332);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(100, 28);
             this.button11.TabIndex = 17;
@@ -245,31 +243,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 382);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 17);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Các quyền vừa cấp";
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(200, 375);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(100, 28);
-            this.button12.TabIndex = 19;
-            this.button12.Text = "Xem";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(137, 426);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Location = new System.Drawing.Point(137, 384);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(100, 28);
             this.button15.TabIndex = 23;
@@ -279,8 +256,8 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(275, 426);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Location = new System.Drawing.Point(275, 384);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(100, 28);
             this.button16.TabIndex = 24;
@@ -291,7 +268,7 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 426);
+            this.label10.Location = new System.Drawing.Point(20, 384);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 17);
@@ -302,12 +279,10 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 475);
+            this.ClientSize = new System.Drawing.Size(416, 429);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label7);
@@ -326,9 +301,9 @@ namespace UIPhanHe1.AT_BMHTTT.UI
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "D";
+            this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -355,8 +330,6 @@ namespace UIPhanHe1.AT_BMHTTT.UI
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label10;

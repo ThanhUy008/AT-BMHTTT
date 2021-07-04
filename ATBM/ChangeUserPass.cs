@@ -8,13 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OracleClient;
-
-
-namespace UIPhanHe1
+namespace UIPhanHe1.AT_BMHTTT.UI
 {
-    public partial class Xoa : Form
+    public partial class ChangeUserPass : Form
     {
-        public Xoa()
+        public ChangeUserPass()
         {
             InitializeComponent();
         }
@@ -35,17 +33,28 @@ namespace UIPhanHe1
         {
             try
             {
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = OraDBConnect.con;
-                cmd.CommandText = "DROPUSER";
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("pi_username", OracleType.NVarChar).Value = comboBox1.Text;
-                cmd.ExecuteNonQuery();
+                if (textBox1.Text == textBox2.Text)
+                {
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = OraDBConnect.con;
+                    cmd.CommandText = "ALTER SESSION SET \"_ORACLE_SCRIPT\"=true";
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = String.Format("alter user {0} identified by {1}", comboBox1.Text, textBox2.Text).ToUpper();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Đổi thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Nhap lai mat khau sai");
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                MessageBox.Show("Mật khẩu hiện tại bị sai");
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        
     }
 }
